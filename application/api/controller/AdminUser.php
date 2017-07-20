@@ -7,7 +7,7 @@
  */
 
 namespace app\api\controller;
-use think\controller;
+use think\Controller;
 
 class AdminUser extends Controller
 {

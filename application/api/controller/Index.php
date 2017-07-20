@@ -13,7 +13,7 @@ use think\Controller;
 class Index extends Controller
 {
     public function index(){
-        return 'XXX';
+        return 'API->index->index';
     }
 
     public function sayHi(){
