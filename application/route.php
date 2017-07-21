@@ -9,6 +9,10 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+use think\Route;
+
+Route::rule('adminuser/:id','api/admin_user/adminUserInfo');
+
 return [
     '__pattern__' => [
         'name' => '\w+',
