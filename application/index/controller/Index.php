@@ -2,6 +2,8 @@
 namespace app\index\controller;
 
 use Firebase\JWT\JWT;
+use think\Exception;
+use think\Request;
 use think\Session;
 
 class Index
@@ -40,10 +42,23 @@ class Index
 
         $jwt = JWT::encode($jwt_payload, $jwt_key);
 
-        var_dump($jwt);
+        //var_dump($jwt);
 
-        $jwt_decode = JWT::decode($jwt, $jwt_key, array("HS256"));
+        try {
+            $jwt_decode = JWT::decode($jwt, $jwt_key, array("HS256"));
 
-        var_dump($jwt_decode);
+            var_dump($jwt_decode);
+
+        } catch (\Firebase\JWT\SignatureInvalidException $e) {
+            echo $e->getMessage();
+        }
+
+
+        /*var_dump($jwt_decode);
+
+        $header_info = Request::instance()->header();
+
+        var_dump($header_info);*/
+
     }
 }
