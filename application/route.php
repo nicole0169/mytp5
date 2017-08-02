@@ -11,7 +11,7 @@
 
 use think\Route;
 
-Route::rule('adminuser/:id','api/admin_user/adminUserInfo');
+Route::rule('api/adminuser/:id','api/admin_user/adminUserInfo');
 
 return [
     '__pattern__' => [

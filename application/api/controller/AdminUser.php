@@ -7,6 +7,7 @@
  */
 
 namespace app\api\controller;
+// 注意首字母大小写问题
 use think\Controller;
 
 class AdminUser extends Controller
