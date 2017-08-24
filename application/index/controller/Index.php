@@ -2,11 +2,12 @@
 namespace app\index\controller;
 
 use Firebase\JWT\JWT;
+use think\Controller;
 use think\Exception;
 use think\Request;
 use think\Session;
 
-class Index
+class Index extends Controller
 {
     public function index()
     {
@@ -60,5 +61,9 @@ class Index
 
         var_dump($header_info);*/
 
+    }
+
+    public function videojj(){
+        return $this->fetch();
     }
 }
